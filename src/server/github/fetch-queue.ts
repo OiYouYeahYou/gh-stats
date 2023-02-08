@@ -1,13 +1,13 @@
 import path from 'path'
 
 enum QueueStatus {
-    InQueue = 'in-queue'
+	InQueue = 'in-queue',
 }
 
 interface QueueItem {
-    status: QueueStatus
-    owner: string
-    repo: string
+	status: QueueStatus
+	owner: string
+	repo: string
 }
 
 export class FetchQueue {

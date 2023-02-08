@@ -5,7 +5,7 @@ import express from 'express'
 import { index, pulls } from '../common/paths'
 import { parcel } from './parcel'
 
-const app = express()
+export const app = express()
 
 app.use(pulls.pattern, (req, res) => {
 	const { owner, repo } = req.params
@@ -15,10 +15,8 @@ app.use(pulls.pattern, (req, res) => {
 	 * 		If not: return 404
 	 * Check if in queue
 	 * 		If yes: retrun 102
-	 * 
+	 *
 	 */
-
-
 
 	// getAll(org, repo)
 	// 	.then((blah) => res.json(blah))
@@ -28,5 +26,3 @@ app.use(pulls.pattern, (req, res) => {
 })
 
 app.use(index.pattern, parcel.middleware)
-
-app.listen(3434, () => console.log('listening to the wind'))

@@ -25,8 +25,8 @@ export type RawTeam = z.infer<typeof teamSchema>
 export type RawUser = z.infer<typeof userSchema>
 
 type _branch = {
-    user: number | null
-    repo: number | null
+	user: number | null
+	repo: number | null
 }
 export type GitHubBranch = _branch & Omit<RawBranch, keyof _branch>
 export type GitHubHref = RawHref
@@ -41,7 +41,7 @@ type _pull = {
 }
 export type GitHubPull = _pull & Omit<RawPull, keyof _pull>
 type _repo = {
-    owner: number | null
+	owner: number | null
 }
 export type GitHubRepo = _repo & Omit<RawRepo, keyof _repo>
 export type GitHubTeam = RawTeam

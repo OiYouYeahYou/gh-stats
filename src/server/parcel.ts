@@ -1,6 +1,4 @@
-import Parcel from 'parcel'
-
-console.log(Parcel)
+import Parcel from 'parcel-bundler'
 
 const file = 'src/client/index.pug'
 const options = {}

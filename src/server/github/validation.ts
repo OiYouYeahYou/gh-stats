@@ -1,7 +1,4 @@
 import { z } from 'zod'
-import { formatZodError } from '../../common/utils/zod-error'
-
-const json = require('../../.scratch/repo-strapi-strapi-pulls.json')
 
 export const userSchema = z.object({
 	login: z.string(),
